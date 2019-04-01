@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Демонстрационная презентация возможностей Reveal.JS</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style>
+			.subject {
+				text-decoration: underline;
+			}
+			
+			.predicate {
+				text-decoration: underline;
+				text-decoration-style: double;
+			}
+			
+			.object {
+				text-decoration: underline;
+				text-decoration-style: dashed;
+			}
+			
+			.attrubute {
+				text-decoration: underline;
+				text-decoration-style: wavy;
+			}
+			
+			.adverbial {
+				text-decoration: underline;
+				text-decoration-style: dotted;
+			}
+
+			.offscreen {
+				clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+				clip: rect(1px, 1px, 1px, 1px);
+				height: 1px;
+				overflow: hidden;
+				position: absolute;
+				white-space: nowrap; /* added line */
+				width: 1px;
+			}
+
+			.offscreen:focus {
+				position:relative;
+				clip:auto;
+				width:auto;
+				height:auto;
+				overflow:auto;
+			}
+		</style>
+	</head>
+	<body>
+		<a id="noteswitch" href="#" title="Включение/отключение заметок субтитров к слайду" style="position:absolute; font-size: 32px ;left:20px; bottom:20px; z-index: 9999;">
+			<i class="fa fa-sticky-note" aria-label="Заметки к слайду"></i>
+		</a>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1><span class="offscreen">Заголовок презентации. </span> HTML презентация<span class="offscreen">.</span></h1>
+					<h2><span class="offscreen">Заголовок слайда. </span>Демонстрационная версия<span class="offscreen">.</span></h2>
+					<p>
+						<span class="offscreen">
+							Для перемещением между слайдами следует пользоваться клавишами
+							<kbd>&lt;Space&gt;</kbd> 
+							<kbd>&lt;Left&gt;</kbd>
+							и <kbd>&lt;Right&gt;.</kbd>
+							Для включения субтитров, используйте клавишу <kbd>&lt;D&gt;</kbd> 
+						</span>
+					</p>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+				
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Возможности презентации<span class="offscreen">.</span></h3>
+					<ul>
+						<li>Доступность в любом современном браузере;</li>
+						<li>Вставка медиа элементов;</li>
+						<li>Режим диктора;</li>
+						<li>Трансляция презентации на многих устройствах одновременно;</li>
+						<li>Организация аудио и видео конференции с чатом для диктора;</li>
+					</ul>
+					<aside class="notes">
+						Если на Вашем устройстве есть браузер (например компьютер, телефон, проектор, телевизор, холодильник и тп), 
+						то с большой долей вероятности Вы сможете запустить просмотр слайдов. <br>
+						В презентацию Вы можете добавить медиаэлементы, такие как изображения, видеофайлы, аудиофайлы, 3d модели. <br>
+						Презентация имеет 2 режима показа: для выступающего и слушающих. <br>
+						При наличии интернет-соединения можно запустить прямой эфир с показом презентации в любом точке планеты. <br>
+						При наличии веб-камеры, микрофона диктор может транслировать изображение и звук для всех желающих во время
+						показа презентации.
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+				
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Возможности презентации<span class="offscreen">.</span></h3>
+					<ul>
+						<li>Интеграция с API сторонних сервисов (например: Yandex SpeechKit для распознавания речи, Google Cloud Vision для распознавания изображений);</li>
+						<li>Математика;</li>
+						<li>Электронные таблицы;</li>
+						<li>Перевод в режиме реального времени;</li>
+					</ul>
+					<aside class="notes">
+						Так как для сценариев презентации используется язык JavaScript, то можно внедрять сторонние
+						функций от таких сервисов, как Yandex SpeechKit для распознавания речи, Google Cloud Vision 
+						для распознавания изображений), что позволит незрячим и неслышащим воспользоваться данной 
+						презентацией. <br>
+						Большие возможности открываются математикам, при использовании katex Вы легко можете вставить 
+						любую формулу в человекочитаемой виде, а при использовании math.js Вы можете производить
+						вычисления прямо на слайде. От операции сложения, до нахождения производных. <br>
+						Если Вы производили расчеты в табличных процессорах (например Excel), то Вы легко можете вставить
+						её на слайд. <br>
+						Используете на слайде иностранные слова или в качестве слушателей имеются иностранцы, то Вы можете
+						облегчить им восприятие контента встроив один из онлайн-переводчиков.
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+				
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Возможности презентации<span class="offscreen">.</span></h3>
+					<ul>
+						<li>Функция школьной доски;</li>
+						<li>Экспортирование презентации в формат pdf;</li>
+						<li>Голосовое управление;</li>
+						<li>Поддержка языка разметки Markdown.</li>
+					</ul>
+					<aside class="notes">
+						При наличии графического планшета или интерактивной доски можно переключать презентацию 
+						в режим школьной доски. <br>
+						Требуют предоставить презентацию в PDF? Просто добавь ?print-pdf а адресную строку и 
+						распечатай презентацию при помощи PDF принтера. <br>
+						Сложно пользоваться клавиатурой или мышкой, листай слайды голосом. <br>
+						Язык markdown настолько простой, что простые презентации относительно легко сможет сделать
+						и незрячий человек.
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+				
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Математика<span class="offscreen">.</span></h3>
+					<p>
+						Общий вид квадратного уравнения: <span class="offscreen">а икс в квадрате плюс б икс плюс ц равно нулю</span><span aria-hidden="true">$ax^2+bx+c=0$</span>
+					</p>
+					<p>
+						Решение уравнения: нахождение его корней или доказательства их отсутствия.
+					</p>
+					<aside class="notes">
+							Квадратное уравнение - это уравнение вида: $ax^2+bx+c=0$ <br>
+							Решением уравнения будет нахождение его корней или доказательства их отсутствия.
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+				
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Математика<span class="offscreen">.</span></h3>
+					<p>Алгоритм нахождения корней:</p>
+					<ul>
+						<li>Находим дискриминант: <span class="offscreen">дискриминант равен бе в квадрате минус четыре а це.</span><span aria-hidden="true">$D = b^2-4ac$</span></li>
+						<li>Находим корни:
+							<span aria-hidden="true">
+							$$
+								\begin{cases}
+									x_{1,2}=\dfrac{-b\pm\sqrt{D}}{2a} &, \text{если } D > 0 \\ 
+									x=\dfrac{-b}{2a} &, \text{если } D = 0 \\ 
+									\text{Корней нет} &, \text{если } D < 0 \\ 
+								\end {cases}
+							$$
+							</span>
+							<span class="offscreen">икс первое и второе равно дроби, в числителе минус б плюс минус корень из дискриминанта, в знаменателе два а, при условии, что дискриминант положительный</span>
+							<span class="offscreen">икс равен минус б деленное на два а, при условии, что дискриминант равен нулю</span>
+							<span class="offscreen">корней нет, при условии, что дискриминант отрицательный</span>
+						</li>
+					</ul>
+					<aside class="notes">
+						Находим дискриминант по формуле: $D = b^2-4ac$. <br>
+						Если дискриминант положительный, то корни уравнения находятся по формуле: $x_{1,2}=\dfrac{-b\pm\sqrt{D}}{2a}$.<br>
+						Если дискриминант равен нулю, то корень второй кратности находится по формуле: $x=\dfrac{-b}{2a}$.<br>
+						Если дискриминант отрицательный, то корней в поле действительных чисел нет.
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Русский язык<span class="offscreen">.</span></h3>
+					<p>Синтаксический разбор предложения<span class="offscreen">.</span></p>
+					<span class="subject" title="Подлежащее"><span class="offscreen">Подлежащее</span> Мама<span class="offscreen">,</span></span>
+					<span class="predicate" title="Сказуемое"><span class="offscreen">Сказуемое</span> мыла<span class="offscreen">,</span></span>
+					<span class="attrubute" title="Определение"><span class="offscreen">Определение</span> грязное<span class="offscreen">,</span></span>
+					<span class="object" title="Дополнение"><span class="offscreen">Дополнение</span> окно<span class="offscreen">,</span></span>
+					<span class="adverbial" title="Обстоятельство"><span class="offscreen">Обстоятельство</span> поздно вечером<span class="offscreen">,</span></span>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+					<aside class="notes">
+						На слайде представлен синтаксический разбор предложения с условными обозначениями в виде подчеркиваний.
+					</aside>
+				</section>
+				
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Изображение<span class="offscreen">.</span></h3>
+					<span aria-hidden="true">
+						<img src="https://avatars.mds.yandex.net/get-pdb/33827/8b04413b-3a28-4044-ac79-bab4fc2f1d4d/s1200" 
+							alt="Кухня в стиле Лофт">
+					</span>
+					<span class="offscreen">Слайд с изображением. По мнению Яндекса здесь изображено: кухня лофт кантри, интерьер в стиле лофт деревянный 
+							домосвещение на кухне лофт, rustic kitchen, кухня в стиле лофт</span>
+					<aside class="notes">
+						Слайд демонстрирующий распознавание изображений для незрячих. Например по мнению Яндекса здесь изображено: кухня лофт кантри, интерьер в стиле лофт деревянный 
+						домосвещение на кухне лофт, rustic kitchen, кухня в стиле лофт.
+					</aside>
+					<span class="offscreen">Конец презентации, спасибо за внимание.</span>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true, 
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/katex/katex.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			
+        Reveal.addEventListener( 'ready', function( event ) {
+			noteswitch.onclick = function () {
+				Reveal.configure({
+					showNotes: (Reveal.getConfig().showNotes ? false: true)
+				});
+				return false;
+			};
+            Reveal.configure({
+                keyboard: {
+                    68: function() {
+						Reveal.configure({
+							showNotes: (Reveal.getConfig().showNotes ? false: true)
+						});
+                    },
+                }
+            });
+        });
+			
+			
+		</script>
+	</body>
+</html>
