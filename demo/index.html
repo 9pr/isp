@@ -69,9 +69,7 @@
 		<a id="noteswitch" href="#" title="Включение/отключение заметок субтитров к слайду" style="position:absolute; font-size: 32px ;left:20px; bottom:20px; z-index: 9999;">
 			<i class="fa fa-sticky-note" aria-label="Заметки к слайду"></i>
 		</a>
-		<a id="langswitch" href="#" title="Перевод слайда на английский язык" style="position:absolute; font-size: 32px ;left:62px; bottom:20px; z-index: 9999;">
-			En
-		</a>
+		<div style="position: fixed;bottom: 0;left: 62px;" id="ytWidget"></div>
 		<div class="reveal">
 			<div class="slides">
 				<section>
@@ -230,7 +228,8 @@
 		</div>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-
+		<script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=ru&widgetTheme=light&autoMode=false" type="text/javascript"></script>
+		
 		<script>
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
@@ -281,9 +280,5 @@
         });
 			
 		</script>
-
-<div id="ytWidget"></div><script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=ru&widgetTheme=light&autoMode=false" type="text/javascript"></script>
-
-
 	</body>
 </html>
