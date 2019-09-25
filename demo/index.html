@@ -69,6 +69,9 @@
 		<a id="noteswitch" href="#" title="Включение/отключение заметок субтитров к слайду" style="position:absolute; font-size: 32px ;left:20px; bottom:20px; z-index: 9999;">
 			<i class="fa fa-sticky-note" aria-label="Заметки к слайду"></i>
 		</a>
+		<a id="langswitch" href="#" title="Перевод слайда на английский язык" style="position:absolute; font-size: 32px ;left:62px; bottom:20px; z-index: 9999;">
+			En
+		</a>
 		<div class="reveal">
 			<div class="slides">
 				<section>
@@ -244,9 +247,25 @@
 			});
 			
         Reveal.addEventListener( 'ready', function( event ) {
-			noteswitch.onclick = function () {
+			document.getElementById('noteswitch').onclick = function () {
 				Reveal.configure({
 					showNotes: (Reveal.getConfig().showNotes ? false: true)
+				});
+				return false;
+			};
+			document.getElementById('langswitch').onclick = function () {
+				fetch('https://translate.yandex.net/api/v1.5/tr.json/translate?lang=ru-en&key=trnsl.1.1.20140913T174349Z.32db62294d68e721.c83980b54a7f53bec19323d5428451fd1b23bd16&format=html', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded'
+				},
+					body: 'text='+encodeURI(Reveal.getCurrentSlide().innerText)
+				})
+				.then(response => response.json())
+				.then(data => {
+					console.log(data);
+					console.log(encodeURI(Reveal.getCurrentSlide().innerText));
+					Reveal.getCurrentSlide().innerText = data.text[0];
 				});
 				return false;
 			};
@@ -261,7 +280,10 @@
             });
         });
 			
-			
 		</script>
+
+<div id="ytWidget"></div><script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=ru&widgetTheme=light&autoMode=false" type="text/javascript"></script>
+
+
 	</body>
 </html>
