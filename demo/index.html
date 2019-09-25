@@ -63,13 +63,23 @@
 				height:auto;
 				overflow:auto;
 			}
+			.definition {
+				font-style: italic !important;
+				font-weight: 200 !important;
+			}
+			.small {
+				font-size: medium !important;
+			}
 		</style>
 	</head>
 	<body>
-		<a id="noteswitch" href="#" title="Включение/отключение заметок субтитров к слайду" style="position:absolute; font-size: 32px ;left:20px; bottom:20px; z-index: 9999;">
-			<i class="fa fa-sticky-note" aria-label="Заметки к слайду"></i>
-		</a>
-		<div style="position: fixed;bottom: 0;left: 62px;" id="ytWidget"></div>
+
+		<div class="chalkboard-button" id="toggle-chalkboard" style="position: absolute; z-index: 30; font-size: 24px; left: 20px; bottom: 30px;">
+			<a id="noteswitch" href="#" title="Включение/отключение заметок субтитров к слайду">
+				<i class="fa fa-sticky-note" aria-label="Заметки к слайду"></i>
+			</a>
+		</div>
+		<div style="position: fixed; bottom: 0; left: 140px;  z-index: 9999;" id="ytWidget"></div>
 		<div class="reveal">
 			<div class="slides">
 				<section>
@@ -88,72 +98,167 @@
 				</section>
 				
 				<section>
-					<h3><span class="offscreen">Заголовок слайда. </span>Возможности презентации<span class="offscreen">.</span></h3>
+					<h3><span class="offscreen">Заголовок слайда. </span>Reveal.JS<span class="offscreen">.</span></h3>
+					<p>Презентация доступна:</p>
 					<ul>
-						<li>Доступность в любом современном браузере;</li>
-						<li>Вставка медиа элементов;</li>
-						<li>Режим диктора;</li>
-						<li>Трансляция презентации на многих устройствах одновременно;</li>
-						<li>Организация аудио и видео конференции с чатом для диктора;</li>
+						<li>в любом современном браузере;</li>
+						<li>на компьютере, смартфоне, планшете, смарт&nbsp;тв;</li>
+						<li>как онлайн, так и оффлайн (кроме перевода, голосового управления, режима конференции).</li>
 					</ul>
 					<aside class="notes">
-						Если на Вашем устройстве есть браузер (например компьютер, телефон, проектор, телевизор, холодильник и тп), 
-						то с большой долей вероятности Вы сможете запустить просмотр слайдов. <br>
-						В презентацию Вы можете добавить медиаэлементы, такие как изображения, видеофайлы, аудиофайлы, 3d модели. <br>
-						Презентация имеет 2 режима показа: для выступающего и слушающих. <br>
-						При наличии интернет-соединения можно запустить прямой эфир с показом презентации в любом точке планеты. <br>
-						При наличии веб-камеры, микрофона диктор может транслировать изображение и звук для всех желающих во время
-						показа презентации.
+						Презентация доступна в любом современном браузере на компьютере, смартфоне, планшете и смарттв <br>
+						Для работы в большинстве случаев не потребуется даже Интернет.
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+					
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Режим конференции<span class="offscreen">.</span></h3>
+					<p class="definition">При временной нетрудоспособности или нахождения в труднодоступном месте можно организовать конференцию
+							и транслировать содержимое презентации в режиме онлайн. А при наличии микрофона и вебкамеры можно 
+							организовать живое общение между теми, кто находится в аудитории и теми, кто находится дома. 
+					</p>
+						<hr>
+					<p>
+						Данный функционал находится в разработке
+					</p>
+					<aside class="notes">
+							При временной нетрудоспособности или нахождения в труднодоступном месте можно организовать конференцию
+							и транслировать содержимое презентации в режиме онлайн. А при наличии микрофона и вебкамеры можно 
+							организовать живое общение между теми, кто находится в аудитории и теми, кто находится дома. <br>
+							Данный функционал находится в разработке
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+			
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Режим конференции<span class="offscreen">.</span></h3>
+					<p class="definition">При проблемах со слухом можно создавать комментарии, которые человек может 
+						посмотреть дополнительно.
+						<hr>
+					<p>
+							Для запуска нажмите на <kbd>&lt;D&gt;</kbd> или первую кнопку внизу экрана.
+					</p>
+					<aside class="notes">
+							При проблемах со слухом можно создавать комментарии, которые человек может 
+							посмотреть дополнительно. <br>
+							Например на слайде будет список, а в комментариях - подробное описание
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Перевод<span class="offscreen">.</span></h3>
+					<p class="definition">Иноязычные люди при наличии непонятных слов могут произвести машинный 
+						перевод с помощью виджета снизу и данная презентация будет доступна и им.</p>
+						<hr>
+					<p>
+						Для запуска воспользуйтесь кнопкой ниже.
+					</p>
+
+					<aside class="notes">
+						Иноязычные люди при наличии непонятных слов могут произвести машинный 
+						перевод с помощью виджета снизу и данная презентация будет доступна и им. <br>
+						Для запуска воспользуйтесь кнопкой ниже.
 					</aside>
 					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
 				</section>
 				
 				<section>
-					<h3><span class="offscreen">Заголовок слайда. </span>Возможности презентации<span class="offscreen">.</span></h3>
-					<ul>
-						<li>Интеграция с API сторонних сервисов (например: Yandex SpeechKit для распознавания речи, Google Cloud Vision для распознавания изображений);</li>
-						<li>Математика;</li>
-						<li>Электронные таблицы;</li>
-						<li>Перевод в режиме реального времени;</li>
-					</ul>
+					<h3><span class="offscreen">Заголовок слайда. </span>Школьная доска<span class="offscreen">.</span></h3>
+					<p class="definition">При запуске презентации на интерактивной доске, можно перевести её в режим 
+						школьной доски и делать заметки прямо на слайде.</p>
+						<hr>
+					<p>
+						Для запуска нажмите на <kbd>&lt;B&gt;</kbd> или вторую кнопку внизу экрана.
+					</p>
+
 					<aside class="notes">
-						Так как для сценариев презентации используется язык JavaScript, то можно внедрять сторонние
-						функций от таких сервисов, как Yandex SpeechKit для распознавания речи, Google Cloud Vision 
-						для распознавания изображений), что позволит незрячим и неслышащим воспользоваться данной 
-						презентацией. <br>
-						Большие возможности открываются математикам, при использовании katex Вы легко можете вставить 
-						любую формулу в человекочитаемой виде, а при использовании math.js Вы можете производить
-						вычисления прямо на слайде. От операции сложения, до нахождения производных. <br>
-						Если Вы производили расчеты в табличных процессорах (например Excel), то Вы легко можете вставить
-						её на слайд. <br>
-						Используете на слайде иностранные слова или в качестве слушателей имеются иностранцы, то Вы можете
-						облегчить им восприятие контента встроив один из онлайн-переводчиков.
+							При запуске презентации на интерактивной доске, можно перевести её в режим 
+							школьной доски и делать заметки прямо на слайде. <br>
+							Для запуска нажмите на <kbd>&lt;B&gt;</kbd> или кнопку внизу экрана.
 					</aside>
 					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
 				</section>
 				
 				<section>
-					<h3><span class="offscreen">Заголовок слайда. </span>Возможности презентации<span class="offscreen">.</span></h3>
-					<ul>
-						<li>Функция школьной доски;</li>
-						<li>Экспортирование презентации в формат pdf;</li>
-						<li>Голосовое управление;</li>
-						<li>Поддержка языка разметки Markdown.</li>
-					</ul>
+					<h3><span class="offscreen">Заголовок слайда. </span>Экспорт в PDF<span class="offscreen">.</span></h3>
+					<p class="definition">При необходимости можно с легкостью сохранить презентацию для печати 
+						(в том числе в PDF, через виртуальный принтер).</p>
+						<hr>
+						<a target="_target" href="http://demo.isp.9pr.ru/?print-pdf">Перейдите по ссылке и нажмите печать, выбрав виртуальный принтер PDF.</a>
+				
+
 					<aside class="notes">
-						При наличии графического планшета или интерактивной доски можно переключать презентацию 
-						в режим школьной доски. <br>
-						Требуют предоставить презентацию в PDF? Просто добавь ?print-pdf а адресную строку и 
-						распечатай презентацию при помощи PDF принтера. <br>
-						Сложно пользоваться клавиатурой или мышкой, листай слайды голосом. <br>
-						Язык markdown настолько простой, что простые презентации относительно легко сможет сделать
-						и незрячий человек.
+							При необходимости можно с легкостью сохранить презентацию для печати 
+						(в том числе в PDF, через виртуальный принтер)
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Языка разметки Markdown<span class="offscreen">.</span></h3>
+					<p class="definition">С помощью простого языка Markdown самые простые презентации может собрать любой незрячий.</p>
+						<hr>
+						<pre><code data-trim data-noescape>
+								### Список городов Удмуртии и известные люди
+								- Ижевск - **М.Т. Калашников**
+								- Сарапул - **Н.А. Дурова**
+								- Глазов - **О.Л. Книппер-Чехова**
+								- Воткинск - **П.И. Чайковский**
+								- Можга
+								- Камбарка
+							</code></pre>
+						
+
+					<aside class="notes">
+							С помощью простого языка Markdown самые простые презентации может собрать любой незрячий.
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+				
+				<section data-markdown data-separator-notes="^Note:">
+					<script type="text/template">
+						### Список городов Удмуртии и известные люди
+						- Ижевск - **М.Т. Калашников**
+						- Сарапул - **Н.А. Дурова**
+						- Глазов - **О.Л. Книппер-Чехова**
+						- Воткинск - **П.И. Чайковский**
+						- Можга
+						- Камбарка
+
+						Note:
+						На слайде представлены известные люди, жившие в соответствующих городах.  
+						М.Т. Калашников - конструктор оружия  
+						Н.А. Дурова - одна из первых российских женщин офицер  
+						О.Л. Книппер-Чехова - советская актриса МХАТа, жена писателя А.П. Чехова  
+						П.И. Чайковский - российский композитор
+					</script>
+				</section>
+
+
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Голосовое управление<span class="offscreen">.</span></h3>
+
+					<p class="definition">С помощью Yandex Speechkit Cloud можно организовать переключение слайдов и управление 
+						интерактивными элементами, а с помощью языка markdown и создавать саму презентацию голосом.</p>
+						<hr>
+					<p>
+						Интеграция с данным сервисом находится в разработке
+					</p>
+					<aside class="notes">
+						С помощью Yandex Speechkit Cloud можно организовать переключение слайдов и управление 
+						интерактивными элементами.<br>
+						Интеграция с данным сервисом находится в разработке
 					</aside>
 					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
 				</section>
 				
 				<section>
 					<h3><span class="offscreen">Заголовок слайда. </span>Математика<span class="offscreen">.</span></h3>
+
+					<p class="definition">Библиотека katex позволяет вставлять формулы любой сложности.</p>
+					<hr>
 					<p>
 						Общий вид квадратного уравнения: <span class="offscreen">а икс в квадрате плюс б икс плюс ц равно нулю</span><span aria-hidden="true">$ax^2+bx+c=0$</span>
 					</p>
@@ -161,6 +266,7 @@
 						Решение уравнения: нахождение его корней или доказательства их отсутствия.
 					</p>
 					<aside class="notes">
+							С помощью библиотеки katex позволяет вставлять формулы любой сложности. <br>
 							Квадратное уравнение - это уравнение вида: $ax^2+bx+c=0$ <br>
 							Решением уравнения будет нахождение его корней или доказательства их отсутствия.
 					</aside>
@@ -178,7 +284,7 @@
 								\begin{cases}
 									x_{1,2}=\dfrac{-b\pm\sqrt{D}}{2a} &, \text{если } D > 0 \\ 
 									x=\dfrac{-b}{2a} &, \text{если } D = 0 \\ 
-									\text{Корней нет} &, \text{если } D < 0 \\ 
+									\text{Корней нет} &, \text{если } D < 0
 								\end {cases}
 							$$
 							</span>
@@ -198,6 +304,9 @@
 
 				<section>
 					<h3><span class="offscreen">Заголовок слайда. </span>Русский язык<span class="offscreen">.</span></h3>
+
+					<p class="definition">Различные визуальные элементы имеют текстовое описание для скринридеров.</p>
+					<hr>
 					<p>Синтаксический разбор предложения<span class="offscreen">.</span></p>
 					<span class="subject" title="Подлежащее"><span class="offscreen">Подлежащее</span> Мама<span class="offscreen">,</span></span>
 					<span class="predicate" title="Сказуемое"><span class="offscreen">Сказуемое</span> мыла<span class="offscreen">,</span></span>
@@ -206,15 +315,23 @@
 					<span class="adverbial" title="Обстоятельство"><span class="offscreen">Обстоятельство</span> поздно вечером<span class="offscreen">,</span></span>
 					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
 					<aside class="notes">
+							Различные визуальные элементы имеют текстовое описание для скринридеров. <br>
 						На слайде представлен синтаксический разбор предложения с условными обозначениями в виде подчеркиваний.
 					</aside>
 				</section>
 				
 				<section>
 					<h3><span class="offscreen">Заголовок слайда. </span>Изображение<span class="offscreen">.</span></h3>
+					<p class="definition">Что изображено на картинке можно описать вручную или воспользоваться 
+						результатом работы Yandex Vision .</p>
+					<hr>
 					<span aria-hidden="true">
-						<img src="https://avatars.mds.yandex.net/get-pdb/33827/8b04413b-3a28-4044-ac79-bab4fc2f1d4d/s1200" 
-							alt="Кухня в стиле Лофт">
+						<img width="360px" src="img/s1200.webp" 
+							alt="Кухня в стиле Лофт" style="float: left;">
+					<span class="small">
+							Скринридер прочитает для незрячего: "По мнению Яндекса здесь изображено: кухня лофт кантри, интерьер в стиле лофт деревянный 
+							домосвещение на кухне лофт, rustic kitchen, кухня в стиле лофт", при этом этот текст прочитан не будет.
+					</span>
 					</span>
 					<span class="offscreen">Слайд с изображением. По мнению Яндекса здесь изображено: кухня лофт кантри, интерьер в стиле лофт деревянный 
 							домосвещение на кухне лофт, rustic kitchen, кухня в стиле лофт</span>
@@ -236,11 +353,25 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				history: true, 
+				chalkboard: { 
+					src: "chalkboard.json",
+					toggleChalkboardButton: { 
+						left: "60px", bottom: "30px", 
+						top: "auto", right: "auto" 
+					},
+					toggleNotesButton: {
+						left: "100px", bottom: "30px", 
+						top: "auto", right: "auto" 
+					},
+					transition: 800,
+					theme: "chalkboard", //whiteboard
+				},
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/katex/katex.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chalkboard/chalkboard.js' },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
@@ -252,29 +383,15 @@
 				});
 				return false;
 			};
-			document.getElementById('langswitch').onclick = function () {
-				fetch('https://translate.yandex.net/api/v1.5/tr.json/translate?lang=ru-en&key=trnsl.1.1.20140913T174349Z.32db62294d68e721.c83980b54a7f53bec19323d5428451fd1b23bd16&format=html', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/x-www-form-urlencoded'
-				},
-					body: 'text='+encodeURI(Reveal.getCurrentSlide().innerText)
-				})
-				.then(response => response.json())
-				.then(data => {
-					console.log(data);
-					console.log(encodeURI(Reveal.getCurrentSlide().innerText));
-					Reveal.getCurrentSlide().innerText = data.text[0];
-				});
-				return false;
-			};
             Reveal.configure({
                 keyboard: {
-                    68: function() {
+                    68: function() { // S - включает заметки
 						Reveal.configure({
 							showNotes: (Reveal.getConfig().showNotes ? false: true)
 						});
-                    },
+					},
+					66: function() { RevealChalkboard.toggleChalkboard() },	// B - включает доску
+                    46: function() { RevealChalkboard.clear() },	// DEL ощищает содержимое
                 }
             });
         });
