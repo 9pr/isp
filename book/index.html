@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Рекомендация по созданию презентации</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style>
+			.subject {
+				text-decoration: underline;
+			}
+			
+			.predicate {
+				text-decoration: underline;
+				text-decoration-style: double;
+			}
+			
+			.object {
+				text-decoration: underline;
+				text-decoration-style: dashed;
+			}
+			
+			.attrubute {
+				text-decoration: underline;
+				text-decoration-style: wavy;
+			}
+			
+			.adverbial {
+				text-decoration: underline;
+				text-decoration-style: dotted;
+			}
+
+			.offscreen {
+				clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+				clip: rect(1px, 1px, 1px, 1px);
+				height: 1px;
+				overflow: hidden;
+				position: absolute;
+				white-space: nowrap; /* added line */
+				width: 1px;
+			}
+
+			.offscreen:focus {
+				position:relative;
+				clip:auto;
+				width:auto;
+				height:auto;
+				overflow:auto;
+			}
+			.definition {
+				font-style: italic !important;
+				font-weight: 200 !important;
+			}
+			.small {
+				font-size: medium !important;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="chalkboard-button" id="toggle-chalkboard" style="position: absolute; z-index: 30; font-size: 24px; left: 20px; bottom: 30px;">
+			<a id="noteswitch" href="#" title="Включение/отключение заметок субтитров к слайду">
+				<i class="fa fa-sticky-note" aria-label="Заметки к слайду"></i>
+			</a>
+		</div>
+		<div style="position: fixed; bottom: 0; left: 140px;  z-index: 9999;" id="ytWidget"></div>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1><span class="offscreen">Заголовок презентации. </span> Рекомендации<span class="offscreen">.</span></h1>
+					<h2><span class="offscreen">Заголовок слайда. </span>по созданию презентаций<span class="offscreen">.</span></h2>
+					<p>
+						<span class="offscreen">
+							Для перемещением между слайдами следует пользоваться клавишами
+							<kbd>&lt;Space&gt;</kbd> 
+							<kbd>&lt;Left&gt;</kbd>
+							и <kbd>&lt;Right&gt;.</kbd>
+							Для включения субтитров, используйте клавишу <kbd>&lt;D&gt;</kbd> 
+						</span>
+					</p>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+				
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Для людей с проблемами зрения<span class="offscreen">.</span></h3>
+					<ul>
+						<li>Придерживайтесь стандарту <a href="#">WIA-ARIA</a>(ToDo);</li>
+						<li>Описывайте все медиаобъекты
+							<ul>
+								<li>Изображения при помощи свойства alt</li>
+								<pre><code data-trim data-noescape>
+									&lt;img src="link" alt="Описание">
+								</code></pre>
+								<li>Визуальные объекты, такие как например выделения, при помощи свойства title</li>
+								<pre><code data-trim data-noescape>
+									&lt;span class="predicate" title="Сказуемое">Работает&lt;/span>
+								</code></pre>
+							</ul>
+						</li>
+					</ul>
+					<aside class="notes">
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+					
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Для людей с проблемами зрения<span class="offscreen">.</span></h3>
+					<ul>
+						<li>Продумывайте легенду, чтобы любой незрячий, впервые попав на презентацию,
+							смог с легкостью по ней перемещаться. Описывайте на первом слайде всю навигацию. 
+						<pre><code data-trim data-noescape>
+							&lt;span class="offscreen legend">
+							  Для перемещением между слайдами следует пользоваться
+							  клавишами &lt;kbd>&lt;Space&gt;&lt;/kbd>  &lt;kbd>&lt;Left&gt;&lt;/kbd>
+							  и &lt;kbd>&lt;Right&gt;.&lt;/kbd>
+							  Для включения субтитров, используйте клавишу &lt;kbd>&lt;D&gt;&lt;/kbd> 
+							&lt;/span>
+						</code></pre>
+						</li>
+					</ul>
+					<aside class="notes">
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+					
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Для людей с проблемами зрения<span class="offscreen">.</span></h3>
+					<ul>
+						<li>Используйте класс offscreen для любой информации, которую необходимо проговорить 
+							скринридеру, но которую не нужно показывать на слайде. Например, описание объекта
+							 или знаки препинания.
+						<pre><code data-trim data-noescape>
+							&lt;h3>&ltspan class="offscreen">Заголовок слайда. &lt/span>
+							  Р&ltspan class="offscreen">.&lt/span>&lt/h3>
+						</code></pre>
+						</li>
+					</ul>
+					<aside class="notes">
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+					
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Для людей с проблемами зрения<span class="offscreen">.</span></h3>
+					<ul>
+						<li>К видео всегда вставляйте субтитры для тифлокомментариев</li>
+						<li>Для паузы скринридера, если визуально знаки препинания не выделены, 
+							необходимо проставить их принудительно.
+							Например, в конце заголовка, при помощи класса offscreen</li>
+						<pre><code data-trim data-noescape>
+							&lt;span class="offscreen">.&lt;/span>
+						</code></pre>
+					</ul>
+					<aside class="notes">
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Для людей с проблемами зрения<span class="offscreen">.</span></h3>
+					<ul>
+						<li>Сам класс offscreen необходимо описать следующим образом:</li>
+						<pre><code data-trim data-noescape>
+							.offscreen {
+								clip: rect(1px 1px 1px 1px);
+								clip: rect(1px, 1px, 1px, 1px);
+								height: 1px; width: 1px;
+								overflow: hidden; position: absolute;
+								white-space: nowrap;
+							}
+							.offscreen:focus {
+								position:relative;
+								clip:auto; overflow:auto;
+								width:auto; height:auto;
+							}
+						</code></pre>
+					</ul>
+					<aside class="notes">
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+					
+				<section>
+					<h3><span class="offscreen">Заголовок слайда. </span>Для иноязычных людей<span class="offscreen">.</span></h3>
+					<ul>
+						<li>Для каждого языка рекомендуется создавать отдельную 
+							презентацию с особенностями конкретного языка;</li>
+					</ul>
+					<aside class="notes">
+					</aside>
+					<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+				</section>
+
+				<section>
+						<h3><span class="offscreen">Заголовок слайда. </span>Для иноязычных людей<span class="offscreen">.</span></h3>
+						<ul>
+							<li>При почти нулевой аудитории создание целой новой презентации нецелесообразно и 
+								рекомендуется вставить виджет Yandex переводчика или других сервисов.</li>
+							<pre><code data-trim data-noescape>
+								&lt;div style="position: fixed; bottom: 0; left: 140px; 
+									z-index: 9999;" id="ytWidget">&lt;/div>
+								&lt;script src="https://translate.yandex.net
+									/website-widget/v1/widget.js?widgetId=ytWidget&
+									pageLang=ru&widgetTheme=light&autoMode=false" 
+									type="text/javascript">
+								&lt;/script>
+							</code></pre>
+						</ul>
+						<aside class="notes">
+						</aside>
+						<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+					</section>
+
+
+				<section>
+						<h3><span class="offscreen">Заголовок слайда. </span>Для людей с проблемами верхних конечностей<span class="offscreen">.</span></h3>
+						<ul>
+							<li>Для доступности людей с проблемами конечности необходимо подключать
+								модули голосового управления. (В разработке)
+							</li>
+							<li>Не блокировать и не переопределять стандартную клавитуарную навигацию, 
+								принятую во многих программах для просмотра презентаций.
+							</li>
+						</ul>
+						<aside class="notes">
+						</aside>
+						<span class="offscreen">Конец слайда, для продолжения нажмите <kbd>&lt;Space&gt;</kbd></span>
+					</section>
+
+					<section>
+						<h3><span class="offscreen">Заголовок слайда. </span>Для людей с проблемами слуха<span class="offscreen">.</span></h3>
+						<ul>
+							<li>Необходимо прописывать полную версию слайда в заметки, чтобы слушатель смог прочитать нераспознаную лектором информацию
+							</li>
+							<li>Все аудиоряды должны сопровождаться субтитрами
+							</li>
+						</ul>
+						<aside class="notes">
+						</aside>
+						<span class="offscreen">Конец презентации, спасибо за внимание.</span>
+					</section>
+
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=ru&widgetTheme=light&autoMode=false" type="text/javascript"></script>
+		
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true, 
+				chalkboard: { 
+					src: "chalkboard.json",
+					toggleChalkboardButton: { 
+						left: "60px", bottom: "30px", 
+						top: "auto", right: "auto" 
+					},
+					toggleNotesButton: {
+						left: "100px", bottom: "30px", 
+						top: "auto", right: "auto" 
+					},
+					transition: 800,
+					theme: "chalkboard", //whiteboard
+				},
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/katex/katex.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chalkboard/chalkboard.js' },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			
+        Reveal.addEventListener( 'ready', function( event ) {
+			document.getElementById('noteswitch').onclick = function () {
+				Reveal.configure({
+					showNotes: (Reveal.getConfig().showNotes ? false: true)
+				});
+				return false;
+			};
+            Reveal.configure({
+                keyboard: {
+                    68: function() { // S - включает заметки
+						Reveal.configure({
+							showNotes: (Reveal.getConfig().showNotes ? false: true)
+						});
+					},
+					66: function() { RevealChalkboard.toggleChalkboard() },	// B - включает доску
+                    46: function() { RevealChalkboard.clear() },	// DEL ощищает содержимое
+                }
+            });
+        });
+			
+		</script>
+	</body>
+</html>
